@@ -96,8 +96,8 @@ extension OrderedStream: LazySequenceProtocol {
     }
 }
 
-internal extension OrderedStream {
-    func apply<B>(
+public extension OrderedStream {
+    private func apply<B>(
         maxTasks: Int = CPU_COUNT,
         queueMax: Int? = nil,
         dispatch: DispatchQueue? = nil,
